@@ -1,0 +1,1 @@
+Earnings before interest and taxes

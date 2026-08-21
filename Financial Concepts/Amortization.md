@@ -1,0 +1,1 @@
+Same idea as depreciation but for intangible assets.
