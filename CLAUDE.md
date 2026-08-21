@@ -22,7 +22,6 @@ Idea Types/             ← Lynch investment category frameworks
 Books/                  ← notes from investment books
 scripts/                ← Python analysis scripts (not Obsidian notes)
   brent_spreads.py      ← Brent crude call spread analyzer
-  xlsx_model.py         ← cloud-edit Excel models via markdown sidecars
 .venv/                  ← virtual environment (do not edit)
 requirements.txt        ← Python dependencies
 ```
@@ -43,25 +42,9 @@ python3 -m venv .venv
 **Run a script:**
 ```bash
 .venv/bin/python scripts/brent_spreads.py
-.venv/bin/python scripts/xlsx_model.py show
 ```
 
 **`brent_spreads.py`** — fetches live Brent crude options from Barchart using a headless Chromium browser (Playwright), which intercepts the page's internal API call. No API key required. Compares $X/$200 call spreads across strikes $120/$130/$140/$150 for a given expiry, or holds the lower strike fixed at $120 and varies across expiry dates. Prices use bid/ask midpoint where a live market exists; falls back to last settlement price for illiquid strikes.
-
-**`xlsx_model.py`** — cloud/Cursor-friendly Excel workflow. `.xlsx` files stay the formula engine; a markdown sidecar (`TICKER Model Inputs.md`) is the edit surface for blue input cells. Recalculates without Microsoft Excel.
-
-```bash
-.venv/bin/python scripts/xlsx_model.py list
-.venv/bin/python scripts/xlsx_model.py show                  # live Cover outputs
-.venv/bin/python scripts/xlsx_model.py dump                  # xlsx → markdown sidecar
-.venv/bin/python scripts/xlsx_model.py apply                 # sidecar → xlsx, then recalc
-.venv/bin/python scripts/xlsx_model.py set '01_Inputs!B6=35' # one-off cell edit + recalc
-.venv/bin/python scripts/xlsx_model.py sheet 01_Inputs --values
-.venv/bin/python scripts/xlsx_model.py check
-.venv/bin/python scripts/test_xlsx_model.py
-```
-
-Default workbook is `GEO Complete Investment Model`. Pass `-w "GEO ICE"` (unique substring) for the ICE NAV workbook. After local Excel edits, run `dump` so the sidecar matches. Do not copy model outputs into stock notes — live numbers stay in the workbook / sidecar.
 
 **Never duplicate — everything has a place.** This is the core Obsidian principle for this vault. If something is already written somewhere, link to it, never copy it. Industry risks belong in the industry overview note; stock notes link to that note rather than restating the risks.
 

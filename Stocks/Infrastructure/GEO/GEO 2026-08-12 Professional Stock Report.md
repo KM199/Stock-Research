@@ -1,7 +1,7 @@
 # The GEO Group (NYSE: GEO) — Professional Stock Report
 
 **Date:** 2026-08-12 (model refreshed for formula-driven workbook)  
-**Price / shares / BS:** edit live on `01_Inputs` in [[GEO Complete Investment Model]] (or the cloud sidecar [[GEO Complete Investment Model Inputs]])  
+**Price / shares / BS:** edit live on `01_Inputs` in [[GEO Complete Investment Model]]  
 **Related:** [[GEO]] · [[GEO 2026-08-11 ICE RE NAV vs CoreCivic]] · [[GEO 2026-08-06 Q2 Earnings Call Notes]]
 
 > **Where the numbers live:** All tables, forecasts, comps, SOTP, and segment multiples are in **[[GEO Complete Investment Model]]**. This note is the investment narrative and how to use the model — not a second copy of the spreadsheet.
@@ -21,7 +21,6 @@
 | `08_CXW_Comps` | Trading + transaction comps (editable beds/prices) |
 | `09_Scenarios` | Subjective probabilities → weighted $/sh |
 | `00_Cover` | Live dashboard of key outputs |
-| Cloud | Edit [[GEO Complete Investment Model Inputs]] then `.venv/bin/python scripts/xlsx_model.py apply` |
 
 **Tax:** Federal statutory **21%** is on `01_Inputs!B27`. Sale friction uses **tax on gain** (`B32`, default 25%) + txn costs (`B31`) → net take `=1−B32−B31` (~71%). That matches CXW’s ~72% take-home; it is **not** “1 − 21% on the full sale price,” because tax applies to (price − basis) and GEO’s book basis is low.
 
@@ -33,7 +32,7 @@
 
 GEO is a **politically timed RE monetization story** inside a detention / EM operating company. Spot P/E on FY26 EPS *guide* is rich (~24×); EV/EBITDA ~10× is more sane. The stock works if ICE facility sales and/or a 2027 EBITDA ramp clear before the **2028 political window** closes.
 
-Primary outputs (recalculate with `.venv/bin/python scripts/xlsx_model.py show` or Excel after edits):
+Primary outputs (recalculate in Excel after edits):
 - **Approach A** — segment multiples + cash − debt  
 - **Approach B** — full ICE RE sale + residual EBITDA  
 - **Approach C** — full RE NAV re-rate + asset-light residual  

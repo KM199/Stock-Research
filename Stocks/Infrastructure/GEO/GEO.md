@@ -6,9 +6,7 @@ Industry: [[Prisons]]
 Last update: 2026-08-12
 
 **Full report:** [[GEO 2026-08-12 Professional Stock Report]]  
-**Models:** [[GEO Complete Investment Model]] · [[GEO Complete Investment Model Inputs]] · [[GEO ICE RE NAV Model]]
-
-Cloud agents / Cursor: edit the Inputs note (blue cells), then `.venv/bin/python scripts/xlsx_model.py apply`. Live Cover outputs: `xlsx_model.py show`.
+**Models:** [[GEO Complete Investment Model]] · [[GEO ICE RE NAV Model]]
 
 ## Overview:
 The GEO Group operates private prisons / ICE processing centers and provides electronic monitoring (ISAP), secure transportation, and health care. Strategy update (Q2’26): sell turnkey facility real estate to ICE/DHS at replacement-cost appraisals while retaining long-term support-services contracts — same structure CoreCivic just executed.

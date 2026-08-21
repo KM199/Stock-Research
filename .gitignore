@@ -7,8 +7,6 @@
 # worker / script caches
 scripts/.cache/
 scripts/tmp/
-__pycache__/
-*.pyc
 
 # machine-local Cursor worker launchers (home paths, API key source)
 scripts/cursor-worker.sh
